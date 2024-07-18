@@ -1,6 +1,8 @@
+
 import React from 'react'
 
-function Header() {
+
+function Header({dash}) {
   return (
     <div>Header</div>
   )
