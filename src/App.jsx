@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import TextEditor from './pages/TextEditor';
 import Dashboard from './pages/Dashboard'
 import DetailedNewsView from './pages/DetailedNewsView';
+import Footer from './components/Footer';
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Route path='/dashboard' element={<Dashboard/>} />
       <Route path='/newsview' element={<DetailedNewsView/>} />
      </Routes>
+     <Footer />
     </>
   )
 }
