@@ -2,7 +2,9 @@ import React from 'react'
 
 function TextEditor() {
   return (
-    <div>TextEditor</div>
+    <>
+    <h1>Text Editor</h1>
+    </>
   )
 }
 
