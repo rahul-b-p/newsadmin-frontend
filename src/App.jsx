@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import Home from './pages/Home';
 import TextEditor from './pages/TextEditor';
 import Dashboard from './pages/Dashboard'
