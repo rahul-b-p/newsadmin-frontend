@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../components/Header'
 import CategorizedView from "../components/CategorizedView";
 import { Col, Row } from 'react-bootstrap'
 

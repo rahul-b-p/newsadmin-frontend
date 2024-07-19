@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 function CategorizedView() {
+    const [isSelected, setIsSelected] = useState("")
+
+    const handlebutton = (category) => {
+        setIsSelected(category)
+    }
 
     return (
         <>
             <div className='container-fluid row  d-flex w-100'>
                 <div className="col">
-                    <button className=' animated-button me-5' >All</button>
-                    <button className=' animated-button me-4' >Politics </button>
-                    <button className=' animated-button me-4' >Education </button>
-                    <button className=' animated-button me-4'>Sports </button>
-                    <button className=' animated-button  me-4' >Bussiness </button>
-                    <button className=' animated-button me-4' >Local Edition</button>
+                    <button onClick={() => handlebutton('all')} style={{ backgroundColor: isSelected == 'all' ? 'ButtonShadow' : 'transparent' }} className=' animated-button me-5 rounded-pill' >All</button>
+                    <button onClick={() => handlebutton('politics')} style={{ backgroundColor: isSelected == 'politics' ? 'ButtonShadow' : 'transparent' }} className=' animated-button me-4 rounded-pill' >Politics </button>
+                    <button onClick={() => handlebutton('education')} style={{ backgroundColor: isSelected == 'education' ? 'ButtonShadow' : 'transparent' }} className=' animated-button me-4 rounded-pill' >Education </button>
+                    <button onClick={() => handlebutton('sports')} style={{ backgroundColor: isSelected == 'sports' ? 'ButtonShadow' : 'transparent' }} className=' animated-button me-4 rounded-pill'>Sports </button>
+                    <button onClick={() => handlebutton('bussiess')} style={{ backgroundColor: isSelected == 'bussiess' ? 'ButtonShadow' : 'transparent' }} className=' animated-button  me-4 rounded-pill' >Bussiness </button>
+                    <button onClick={() => handlebutton('local')} style={{ backgroundColor: isSelected == 'local' ? 'ButtonShadow' : 'transparent' }} className=' animated-button me-4 rounded-pill' >Local Edition</button>
                 </div>
             </div>
 
@@ -24,7 +29,7 @@ function CategorizedView() {
 
 
                 <div className="col-md-4 p-4 d-flex justify-content-center align-items-center">
-                    <Card style={{ width: "100% " }} className='p-2'>
+                    <Card style={{ width: "100% " }} className='p-2 shadow'>
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
                             <Card.Text className='mt-3'>
@@ -36,7 +41,7 @@ function CategorizedView() {
                     </Card></div>
 
                 <div className="col-md-4 p-4 d-flex justify-content-center align-items-center">
-                    <Card style={{ width: "100%  " }} className='p-2 '>
+                    <Card style={{ width: "100%  " }} className='p-2 shadow'>
 
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
@@ -50,7 +55,7 @@ function CategorizedView() {
                 </div>
 
                 <div className="col-md-4 p-4 d-flex justify-content-center align-items-center">
-                    <Card style={{ width: "100%  " }} className='p-2 '>
+                    <Card style={{ width: "100%  " }} className='p-2 shadow'>
 
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>

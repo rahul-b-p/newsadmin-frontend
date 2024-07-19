@@ -28,7 +28,7 @@
 
 button {
     text-rendering: auto;
-    color: buttontext;
+    /* color: buttontext; */
     letter-spacing: normal;
     word-spacing: normal;
     line-height: normal;
@@ -38,3 +38,4 @@ button {
     text-align: center;
     cursor: default;
 }
+
