@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard';
 import DetailedNewsView from './pages/DetailedNewsView';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Deactivated from './pages/Deactivated';
 
 function App() {
   const location = useLocation();
@@ -24,6 +25,7 @@ function App() {
         <Route path='/editor' element={<TextEditor />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/newsview' element={<DetailedNewsView />} />
+        <Route path='/deactivated' element={<Deactivated/>} />
       </Routes>
       <Footer />
     </>
