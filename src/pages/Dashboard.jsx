@@ -6,7 +6,7 @@ import { Col, Row } from 'react-bootstrap'
 function Dashboard() {
   return (
     <>
-      <Header dash={true} />
+    
       <h3 className='mt-5' style={{ marginLeft: "70px" }}>Admin <span className='text-danger fw-bolder'>Dashboard</span></h3>
 
       <Row className='mt-2 container-fluid p-5'>
