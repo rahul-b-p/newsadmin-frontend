@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../components/Header'
 import Card from 'react-bootstrap/Card';
 
 
@@ -7,7 +6,6 @@ function DetailedNewsView() {
 
   return (
     <>
-      <Header />
 
       <div className='mt-3'>
         <div className="row">
