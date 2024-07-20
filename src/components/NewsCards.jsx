@@ -7,7 +7,7 @@ function NewsCards() {
     <>
       <div className="row w-100 mt-3 mb-2 d-flex justify-content-center align-items-center p-4 ">
 
-        <div className="col-md-4 p-4 d-flex justify-content-center align-items-center">
+        <div className="col-md-4 d-flex p-4  justify-content-center align-items-center">
           <Card style={{ width: "100% " }} className='p-2 shadow'>
             <Card.Body>
               <Card.Title>Card Title</Card.Title>

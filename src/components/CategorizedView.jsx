@@ -11,7 +11,7 @@ function CategorizedView() {
 
     return (
         <>
-            <div className='container-fluid row  d-flex w-100'>
+            <div className='row container-fluid d-flex w-100'>
                 <div className="col">
                     <button onClick={() => handlebutton('all')} style={{ backgroundColor: isSelected == 'all' ? 'ButtonShadow' : 'transparent' }} className=' animated-button me-5 rounded-pill' >All</button>
                     <button onClick={() => handlebutton('politics')} style={{ backgroundColor: isSelected == 'politics' ? 'ButtonShadow' : 'transparent' }} className=' animated-button me-4 rounded-pill' >Politics </button>
@@ -22,7 +22,7 @@ function CategorizedView() {
                 </div>
             </div>
 
-            <NewsCards />
+     <NewsCards />
 
 
         </>

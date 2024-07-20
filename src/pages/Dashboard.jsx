@@ -12,7 +12,7 @@ function Dashboard() {
     <>
 
       <h3 className='mt-5' style={{ marginLeft: "60px" }}>Admin <span className='text-danger fw-bolder'>Dashboard</span>   </h3>
-      <Dropdown style={{ textAlign: "end", marginTop: "-40px",  }} className='me-5 border'>
+      <Dropdown style={{ textAlign: "end",marginTop: "-40px"  }} className='me-5 border'>
   <Dropdown.Toggle variant="white" id="" className="no-caret"  >
     <FontAwesomeIcon  icon={faEllipsisVertical} size="lg" style={{ color: "#0d0d0d" }} />
   </Dropdown.Toggle>
