@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../components/Header'
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 
@@ -71,10 +70,7 @@ function DetailedNewsView() {
               <Card style={{ width: "100% " }} >
                 <Card.Body className='d-flex align-items-center justify-content-center flex-column'>
                   <Card.Text >
-                  {/* <a href='https://www.luminartechnolab.com/' target="_blank">
-                  <img className = 'rounded'  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9pELlNi3Pnncn3X9-Mk3zvfwNlpiD6PZkIg&s" alt="no image" style={{ width: '200px', height: '500px' }}  />
-                 </a> */}
-                 <a href='https://www.luminartechnolab.com/' target="_blank">
+                  <a href='https://www.luminartechnolab.com/' target="_blank">
                  <iframe width="200" height="500" src="https://www.youtube.com/embed/2sofDNM4Ymo?playlist=2sofDNM4Ymo&autoplay=1&mute=1&loop=1" title="Luminar Technolab, Data Science,  Big Data Analytics, Python, Software Testing &amp; MEAN Stack Training" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                  </a>
                   </Card.Text>                  
