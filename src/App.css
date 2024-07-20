@@ -39,3 +39,6 @@ button {
     cursor: default;
 }
 
+.no-caret::after {
+    display: none !important;
+  }
