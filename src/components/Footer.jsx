@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <div className="row w-100 mt-5 p-3 text-light" style={{backgroundColor:'darkblue'}}>
+    <div className="row w-100 p-3 text-light" style={{backgroundColor:'darkblue'}}>
     <div className="col-md-4 p-4 ms-md-5">
       
         <img src={newslogo} alt='' width={'100px'} height={'100px'}/>
