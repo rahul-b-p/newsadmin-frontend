@@ -45,3 +45,9 @@ button {
 .no-caret::after {
     display: none !important;
   }
+  .cardhover:hover{
+    /* background-color:rgb(239, 234, 234); */
+    transform:scale(1.05) ;
+    transition-duration: 350ms;
+    transition-timing-function:ease-in-out;
+}

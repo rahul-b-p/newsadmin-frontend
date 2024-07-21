@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-import cardcss from './Newscard.module.css'
+import cardcss from './HeadlineCard.module.css'
 
 
 function Newscard() {

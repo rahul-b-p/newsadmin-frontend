@@ -1,5 +1,5 @@
 import React from 'react'
-import Newscard from './Newscard'
+import HeadlineCard from './HeadlineCard'
 import { Col, Container, Row } from 'react-bootstrap';
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,10 +13,10 @@ function Headlineview() {
 
         <div className='d-flex justify-content-center align-items-center'>
           <Row className='mt-5'>
-            <Col md={3}><Newscard /></Col>
-            <Col md={3}><Newscard /></Col>
-            <Col md={3}><Newscard /></Col>
-            <Col md={3}><Newscard /></Col>
+            <Col md={3}><HeadlineCard /></Col>
+            <Col md={3}><HeadlineCard /></Col>
+            <Col md={3}><HeadlineCard /></Col>
+            <Col md={3}><HeadlineCard /></Col>
           </Row>
         </div>
       </div>
