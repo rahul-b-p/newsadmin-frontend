@@ -38,6 +38,9 @@ button {
     text-align: center;
     cursor: default;
 }
+.newscard{
+    background-color: red;
+}
 
 .no-caret::after {
     display: none !important;
