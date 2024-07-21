@@ -1,6 +1,5 @@
 import React from 'react'
 import CategorizedView from "../components/CategorizedView";
-import { Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -8,11 +7,10 @@ import { Link } from 'react-router-dom';
 
 function Dashboard() {
 
-
   return (
     <>
 
-      <h3 className='mt-5' style={{ marginLeft: "60px" }}>Admin <span className='text-danger fw-bolder'>Dashboard</span>   </h3>
+      <h2 className='mt-4 mb-4' style={{ marginLeft: "60px" }}>Admin <span className='text-danger fw-bolder'>Dashboard</span>   </h2>
       <Dropdown style={{ textAlign: "end", marginTop: "-40px" }} className='me-5'>
         <Dropdown.Toggle variant="white" id="" className="no-caret"  >
           <FontAwesomeIcon icon={faEllipsisVertical} size="lg" style={{ color: "#0d0d0d" }} />
@@ -29,9 +27,9 @@ function Dashboard() {
       </Dropdown>
 
 
-      <Row className='mt-2 container-fluid p-5'>
-        <CategorizedView />
-      </Row>
+      
+      <CategorizedView />
+  
     </>
   )
 }
