@@ -51,7 +51,6 @@ function Headlineview() {
           </Row>
         </div>
       </div>
-
     </>
   )
 }
