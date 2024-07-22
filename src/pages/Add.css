@@ -1,0 +1,73 @@
+
+  /* Remove focus border */
+  .form-control:focus {
+    outline: none;
+     box-shadow: none;
+     border-color: #c9d1d6;
+   }
+ 
+ 
+ 
+   .position-relative {
+     position: relative;
+   }
+   
+   .date-placeholder {
+     position: absolute;
+     top: 50%;
+     left: 15px;
+     transform: translateY(-50%);
+     color: #6c757d;
+     pointer-events: none;
+   }
+   
+   input[type="date"]:focus + .date-placeholder,
+   input[type="date"]:not(:placeholder-shown) + .date-placeholder {
+     display: none;
+   }
+ 
+   /* react quill */
+   .container {
+     max-width: 50%;
+     margin-top: 5rem;
+   }
+   
+   .shadow-lg {
+     padding: 3rem;
+   }
+   
+   form {
+     width: 100%;
+   }
+   
+   .input-box {
+     position: relative;
+   }
+   
+   .editor {
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     min-height: 100px;
+   }
+   
+   .ql-toolbar {
+     display: none; /* Initially hide toolbar */
+   }
+   
+   .show-toolbar .ql-toolbar {
+     display: block; /* Show toolbar when active */
+   }
+   
+   .hide-toolbar .ql-toolbar {
+     display: none; /* Hide toolbar otherwise */
+   }
+   
+   .input-box:hover .ql-toolbar,
+   .ql-toolbar:hover {
+     display: block; /* Show toolbar on hover */
+   }
+   
+   .btn {
+     padding: 1rem 2.5rem;
+   }
+   
