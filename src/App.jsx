@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-toastify/dist/ReactToastify.css';
+//import 'react-toastify/dist/ReactToastify.css';
 import Home from './pages/Home';
 import TextEditor from './pages/TextEditor';
 import Dashboard from './pages/Dashboard';
