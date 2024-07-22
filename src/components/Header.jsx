@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import newslogo from '../assets/pic3.png';
-
+import '../App.css'
 import { LinearGradient } from 'react-text-gradients';
 
 
@@ -65,74 +65,74 @@ const Header = () => {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row py-2">
-        <div className="col-12 d-flex justify-content-between align-items-center">
-          <div className='d-flex'>
-            <p className='me-2 mb-0'>{day},</p>
-            <p className='me-2 mb-0'>{date},</p>
-            <p className='me-2 mb-0'>{time},</p>
-            <p className='me-2 mb-0'>{temperature}°C,</p>
-            <p className='mb-0'>Kochi</p>
-          </div>
-          <div className='d-flex align-items-center'>
-            <div className="d-none d-md-flex" >
-              <div className="mx-2"><FontAwesomeIcon icon={faFacebook} size='lg' /></div>
-              <div className="mx-2"><FontAwesomeIcon icon={faInstagram} size='lg' /></div>
-              <div className="mx-2"><FontAwesomeIcon icon={faTwitter} size='lg' /></div>
-              <div className="mx-2"><FontAwesomeIcon icon={faLinkedin} size='lg'/></div>
-            </div>
-          </div>
+    <div className="container-fluid ">
+    <div className="row py-2  px-5" style={{height:"50px",backgroundColor:"gray"}}  >
+      <div className="col-12 d-flex justify-content-between align-items-center">
+        <div className='d-flex'>
+          <p className='me-2 mb-0 text-light'>{day},</p>
+          <p className='me-2 mb-0 text-light'>{date},</p>
+          <p className='me-2 mb-0 text-light'>{time},</p>
+          <p className='me-2 mb-0 text-light'>{temperature}°F,</p>
+          <p className='text-light'>Kochi</p>
         </div>
-      </div>
-      <hr/>
-      <div className="row text-center">
-        <div className="col d-flex justify-content-center">
-          <img src={newslogo} alt="News Logo" width="100" height="100" />
-          <h1 className='fs-1 mt-4'>
-  <LinearGradient gradient={['to left', '#2E86C1 , #E74C3C ']}>
-    News Spin
-  </LinearGradient>
-</h1>
-        </div>
-      </div>
-      <hr/>
-      <div className="row">
-        <div className="col-12 d-flex ">
-          <div className='d-flex'>
-            <p className='mt-4 text-primary'>
-              <Link   
-                style={{
-                  textDecoration: 'none',
-                  color: 'blue',
-                  transition: 'color 0.1s ease',
-                }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                to={'/'}
-              >
-                HOME
-              </Link>
-            </p>
-            <p className='mt-4 ms-4'>|</p>
-            <p className='mt-4 ms-4'>
-              <Link 
-                style={{
-                  textDecoration: 'none',
-                  color: 'blue',
-                  transition: 'color 0.3s ease',
-                }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                to={'/dashboard'}
-              >
-                DASHBOARD
-              </Link>
-            </p>
+        <div className='d-flex align-items-center justify-content-center'>
+          <div className="d-none d-md-flex" >
+            <div className="mx-2 icon_hover text-center d-flex justify-content-center align-items-center"><FontAwesomeIcon icon={faFacebook} size='lg' /></div>
+            <div className="mx-2 icon_hover text-center d-flex justify-content-center align-items-center"><FontAwesomeIcon icon={faInstagram} size='lg' /></div>
+            <div className="mx-2 icon_hover text-center d-flex justify-content-center align-items-center"><FontAwesomeIcon icon={faTwitter} size='lg' /></div>
+            <div className="mx-2 icon_hover text-center d-flex justify-content-center align-items-center"><FontAwesomeIcon icon={faLinkedin} size='lg'/></div>
           </div>
         </div>
       </div>
     </div>
+    <hr/>
+    <div className="row text-center">
+      <div className="col d-flex justify-content-center align-items-center">
+        <img src={newslogo} alt="News Logo" width="100" height="100" />
+        <h1 className=' mt-4' style={{fontSize:"6rem",fontWeight:"800",letterSpacing:"4px"}}>
+<LinearGradient gradient={['to left', 'blue , #E74C3C ']}>
+  News Spin
+</LinearGradient>
+</h1>
+      </div>
+    </div>
+    <hr/>
+    <div className="row">
+      <div className="col-12 d-flex ">
+        <div className='d-flex'>
+          <p className='mt-4 text-primary'>
+            <Link   
+              style={{
+                textDecoration: 'none',
+                color: 'blue',
+                transition: 'color 0.1s ease',
+              }}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              to={'/'}
+            >
+              HOME
+            </Link>
+          </p>
+          <p className='mt-4 ms-4'>|</p>
+          <p className='mt-4 ms-4'>
+            <Link 
+              style={{
+                textDecoration: 'none',
+                color: 'blue',
+                transition: 'color 0.3s ease',
+              }}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              to={'/dashboard'}
+            >
+              DASHBOARD
+            </Link>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
   );
 };
 

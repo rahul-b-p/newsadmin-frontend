@@ -35,7 +35,7 @@ function DetailedNewsView() {
              
                <img className = 'rounded' style={{ width: '400px', height: '300px' }} src="https://images.news18.com/ibnlive/uploads/2024/06/neet-row-2-2024-06-13692ad39b4da773d4a49a9c964b9050-2024-06-529cad65d683fe0d517cc4e5a3ff1e46.jpeg?impolicy=website" alt="no image" />
              
-              <p>image description</p>
+             
             </div>
             <p style={{ textAlign: 'justify' }}>
               <span className='mt-1 fst-italic fw-bold fst-italic'>July 18, 2024 3:26 PM IST</span> <br />
