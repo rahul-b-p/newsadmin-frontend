@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HeadlineCard from './HeadlineCard'
 import { Col, Container, Row } from 'react-bootstrap';
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom';
+import { displayNewsApi } from '../services/allApi';
 
 
 function Headlineview() {
+  const [newsDetails, setNewsDetails] = useState([])
+  const [latestNews,setLatestNews] =useState([])
+
+  const getHeadline=async()=>{
+    const result = await displayNewsApi()
+    setNewsDetails(result.data)
+    
+    setLatestNews(newsDetails.sort((c1,c2)=>c2.id-c1.id).slice(0, 4))
+  }
+
+  console.log(latestNews);
+
+
+
+  useEffect(()=>{
+    getHeadline()
+  },setLatestNews)
   return (
     <>
       <div className='container border shadow p-5 '>
