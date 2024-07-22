@@ -15,9 +15,9 @@ function NewsCards({ news }) {
             </div>
             <h6 className='my-auto fw-bolder'>{news.headline}</h6>
             </div>
-          <img src={`${news.image}`} alt="image not loaded" width={"100%"} height={"250px"}  />
+          <img src={`${news.image}`} alt="image not loaded" width={"100%"} height={"230px"}  />
           <div  className='d-flex align-items-center justify-content-center'>
-            <Button variant="outline-danger" className='mt-2'>View More</Button>
+            <Button onClick={handleViewMore} variant="outline-danger" className='mt-2'>View More</Button>
           </div>
         </div>
       </Card>
