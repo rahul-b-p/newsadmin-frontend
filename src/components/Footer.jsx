@@ -41,7 +41,7 @@ function Footer() {
 
       <div className="row mb-3">
         <div className="col-12 d-flex flex-wrap">
-          {['HOME', 'DASHBOARD', 'POLITICS', 'EDUCATION', 'SPORT', 'BUSINESS', 'LOCAL EDITION'].map((section, index) => (
+          {['HOME', 'DASHBOARD'].map((section, index) => (
             <p key={index} className='mt-2 mx-2'>
               <Link
                 style={{
