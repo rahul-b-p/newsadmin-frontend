@@ -1,8 +1,14 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useNavigate } from 'react-router-dom';
 
 function NewsCards({ news }) {
+  const navigate = useNavigate()
+
+  const handleViewMore=()=>{
+    navigate('/newsview')
+  }
 
   return (
     <>
