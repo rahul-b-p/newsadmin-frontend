@@ -32,6 +32,7 @@ function Footer() {
         </div>
       </div>
 
+
       <div className="row mb-3">
         <div className="col-12 ">
           <h4>SECTIONS</h4>
