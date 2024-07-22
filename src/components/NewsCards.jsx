@@ -8,7 +8,13 @@ function NewsCards({ news }) {
     <>
       <Card style={{ width: "100% ", height: "430px" }} className='p-3 bg-light cardhover border-1 shadow'>
         <div className='h-100' >
-          <div className='h-25'><h5 className='my-auto'>{news.headline}</h5></div>
+          <div className='h-25'>
+            <div style={{fontSize:'9px'}} className='d-flex'>
+              <p className='text-primary' >{news.category}</p>
+              <p className='ms-auto'>{news.timestamp}</p>
+            </div>
+            <h6 className='my-auto fw-bolder'>{news.headline}</h6>
+            </div>
           <img src={`${news.image}`} alt="image not loaded" width={"100%"} height={"250px"}  />
           <div  className='d-flex align-items-center justify-content-center'>
             <Button variant="outline-danger" className='mt-2'>View More</Button>

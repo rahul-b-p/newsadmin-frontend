@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import NewsCards from './NewsCards';
 import { displayNewsApi } from '../services/allApi';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, ToastContainer } from 'react-bootstrap';
+import { toast } from 'react-toastify';
+
 
 
 function CategorizedView() {
@@ -13,13 +15,12 @@ function CategorizedView() {
         setIsSelected(category)
     }
 
-
     // function to get news
     const getNews = async () => {
         const result = await displayNewsApi()
         setNews(result.data)
     }
-    console.log(newsDetails);
+    // console.log(newsDetails);
 
     useEffect(() => {
         getNews()
@@ -35,6 +36,7 @@ function CategorizedView() {
                     <button onClick={() => handlebutton('sports')} style={{ backgroundColor: isSelected == 'sports' ? 'ButtonShadow' : 'transparent' }} className=' animated-button me-4 rounded-pill'>Sports </button>
                     <button onClick={() => handlebutton('business')} style={{ backgroundColor: isSelected == 'business' ? 'ButtonShadow' : 'transparent' }} className=' animated-button  me-4 rounded-pill' >Bussiness </button>
                     <button onClick={() => handlebutton('local')} style={{ backgroundColor: isSelected == 'local' ? 'ButtonShadow' : 'transparent' }} className=' animated-button me-4 rounded-pill' >Local Edition</button>
+                    <button onClick={() => handlebutton('global')} style={{ backgroundColor: isSelected == 'global' ? 'ButtonShadow' : 'transparent' }} className=' animated-button me-4 rounded-pill' >Global</button>
                 </div>
             </div>
 
@@ -43,25 +45,25 @@ function CategorizedView() {
             {newsDetails?.length > 0 ?
                 <Row className=" w-100 mt-3 mb-2  p-4 ">
                     {isSelected=='all'?
-                        newsDetails.map((item) => (
+                        newsDetails?.sort((c1,c2)=>c2.id-c1.id).map((item) => (
                         <Col xs={12} md={6} lg={4}  className='mb-5' >
                             <NewsCards news={item} />
                         </Col>
                         ))
                         :
-                        newsDetails.map((item) => ( 
+                        newsDetails?.sort((c1,c2)=>c2.id-c1.id).map((item) => ( 
                         item.category==isSelected &&
                         <Col xs={12} md={6} lg={4}  className='mb-5' >
                             <NewsCards news={item} />
-                        </Col>
+                        </Col> 
                     ))}
                 </Row>
                 :
                 <p className='text-center text-danger fw-bold'>No news to display</p>
             }
 
-
-
+            <ToastContainer/>
+            
         </>
     )
 }
