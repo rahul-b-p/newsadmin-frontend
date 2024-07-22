@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import NewsCards from './NewsCards';
 import { displayNewsApi } from '../services/allApi';
-import { Col, Row, ToastContainer } from 'react-bootstrap';
-import { toast } from 'react-toastify';
+import { Col, Row} from 'react-bootstrap';
+
 
 
 
@@ -61,8 +61,6 @@ function CategorizedView() {
                 :
                 <p className='text-center text-danger fw-bold'>No news to display</p>
             }
-
-            <ToastContainer/>
             
         </>
     )
