@@ -18,18 +18,18 @@ function Dashboard() {
 
         <Dropdown.Menu className='mt-2'>
           <Dropdown.Item>
-            <Link style={{textDecoration:"none"}} className='fw-bold text-dark' to={'/editor'}>Add News</Link>
+            <Link style={{ textDecoration: "none" }} className='fw-bold text-dark' to={'/editor'}>Add News</Link>
           </Dropdown.Item>
           <Dropdown.Item>
-            <Link style={{textDecoration:"none"}} className='fw-bold text-dark' to={'/deactivated'}>Deactivated News</Link>
+            <Link style={{ textDecoration: "none" }} className='fw-bold text-dark' to={'/deactivated'}>Deactivated News</Link>
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
 
 
-      
+
       <CategorizedView />
-  
+
     </>
   )
 }

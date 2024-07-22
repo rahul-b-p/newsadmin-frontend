@@ -14,16 +14,16 @@ function DetailedNewsView() {
               <Card style={{ width: "100% " }} >
                 <Card.Body className='d-flex align-items-center justify-content-center flex-column'>
                   <Card.Text >
-                  <a href='https://www.luminartechnolab.com/' target="_blank">
-                  <img className = 'rounded'  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1KLWaXMkGakf1jua2W2Zhw26LHBdtnR_NV449MCebS3N6vbqPFLE5PuEQ7XtsrBHYG-Y&usqp=CAU" alt="no image" style={{ width: '200px', height: '500px' }}  />
-                 </a>
+                    <a href='https://www.luminartechnolab.com/' target="_blank">
+                      <img className='rounded' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1KLWaXMkGakf1jua2W2Zhw26LHBdtnR_NV449MCebS3N6vbqPFLE5PuEQ7XtsrBHYG-Y&usqp=CAU" alt="no image" style={{ width: '200px', height: '500px' }} />
+                    </a>
                   </Card.Text>
-                  
+
                 </Card.Body>
               </Card>
             </div>
 
-          
+
 
           </div>
           <div className="col-md-8 mt-2 px-5 d-flex align-items-center justify-content-center flex-column">
@@ -32,10 +32,10 @@ function DetailedNewsView() {
             </h2>
 
             <div className='d-flex justify-content-center align-items-center flex-column'>
-             
-               <img className = 'rounded' style={{ width: '400px', height: '300px' }} src="https://images.news18.com/ibnlive/uploads/2024/06/neet-row-2-2024-06-13692ad39b4da773d4a49a9c964b9050-2024-06-529cad65d683fe0d517cc4e5a3ff1e46.jpeg?impolicy=website" alt="no image" />
-             
-             
+
+              <img className='rounded' style={{ width: '400px', height: '300px' }} src="https://images.news18.com/ibnlive/uploads/2024/06/neet-row-2-2024-06-13692ad39b4da773d4a49a9c964b9050-2024-06-529cad65d683fe0d517cc4e5a3ff1e46.jpeg?impolicy=website" alt="no image" />
+
+
             </div>
             <p style={{ textAlign: 'justify' }}>
               <span className='mt-1 fst-italic fw-bold fst-italic'>July 18, 2024 3:26 PM IST</span> <br />
@@ -61,17 +61,17 @@ function DetailedNewsView() {
             </div>
 
           </div>
-          
+
           <div className="col-md-2  mt-2 d-flex align-items-center flex-column">
-            
-          <div className='mb-5 mx-3'>
+
+            <div className='mb-5 mx-3'>
               <Card style={{ width: "100% " }} >
                 <Card.Body className='d-flex align-items-center justify-content-center flex-column'>
                   <Card.Text >
-                  <a href='https://www.luminartechnolab.com/' target="_blank">
-                 <iframe width="200" height="500" src="https://www.youtube.com/embed/2sofDNM4Ymo?playlist=2sofDNM4Ymo&autoplay=1&mute=1&loop=1" title="Luminar Technolab, Data Science,  Big Data Analytics, Python, Software Testing &amp; MEAN Stack Training" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                 </a>
-                  </Card.Text>                  
+                    <a href='https://www.luminartechnolab.com/' target="_blank">
+                      <iframe width="200" height="500" src="https://www.youtube.com/embed/2sofDNM4Ymo?playlist=2sofDNM4Ymo&autoplay=1&mute=1&loop=1" title="Luminar Technolab, Data Science,  Big Data Analytics, Python, Software Testing &amp; MEAN Stack Training" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </a>
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </div>

@@ -1,16 +1,16 @@
 import axios from "axios";
 
 
-export const commonApi =async(httpRequest,url,reqBody)=>{
-    let reqConfig ={
-        method:httpRequest,
+export const commonApi = async (httpRequest, url, reqBody) => {
+    let reqConfig = {
+        method: httpRequest,
         url,
-        data:reqBody,
-        headers:{"Content-Type":"application/json"}
+        data: reqBody,
+        headers: { "Content-Type": "application/json" }
     }
-    return await axios(reqConfig).then((request)=>{
+    return await axios(reqConfig).then((request) => {
         return request
-    }).catch((err)=>{
+    }).catch((err) => {
         return err
     })
 }

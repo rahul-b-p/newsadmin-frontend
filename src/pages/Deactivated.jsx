@@ -9,7 +9,7 @@ function Deactivated() {
 
       <Row className='mt-5 p-4 w-100'>
         <Col xs={12} md={6} lg={4}>
-          <div className='w-100 border p-2 mb-5 rounded' style={{backgroundColor:'lightgray'}}>
+          <div className='w-100 border p-2 mb-5 rounded' style={{ backgroundColor: 'lightgray' }}>
             {/* <NewsCards/> */}
             <div className='d-flex justify-content-between p-2'>
               <button className='btn btn-success' >Activate</button>
@@ -17,7 +17,7 @@ function Deactivated() {
             </div>
           </div>
         </Col>
-        
+
       </Row>
 
     </>

@@ -11,23 +11,23 @@ function TextEditor() {
     headline: "",
     place: "",
     content: "",
-    image:"",
-    category:"",
-    timestamp:""
+    image: "",
+    category: "",
+    timestamp: ""
   });
 
 
   const [activeEditor, setActiveEditor] = useState(null);
 
-  const handlleInputChange = (value,field)=>{
+  const handlleInputChange = (value, field) => {
     setNewsDetails({
       ...newsDetails,
-      [field]:value,
+      [field]: value,
     });
   };
 
   // handle submit
-  const handleSubmit =(e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(newsDetails);
   }
@@ -45,58 +45,58 @@ function TextEditor() {
   };
   return (
     <>
-   <div className='container w-50 mt-5'>
+      <div className='container w-50 mt-5'>
         <div className='py-5 shadow-lg px-3'>
           <h1 className='pb-3'>Add News</h1>
           <form onSubmit={handleSubmit}>
             {/* title */}
-            <div 
-            className="pb-3 input-box"
-            onMouseEnter={() => setActiveEditor('headline')}
-            onMouseLeave={() => setActiveEditor(null)}
-          >
-            <ReactQuill
-              value={newsDetails.headline}
-              onChange={(value) => handlleInputChange(value, 'headline')}
-              theme="snow"
-              modules={modules}
-              placeholder="Headline"
-              className={`editor ${activeEditor === 'headline' ? 'show-toolbar' : 'hide-toolbar'}`}
-            />
-             
-          </div>
-             
-          
+            <div
+              className="pb-3 input-box"
+              onMouseEnter={() => setActiveEditor('headline')}
+              onMouseLeave={() => setActiveEditor(null)}
+            >
+              <ReactQuill
+                value={newsDetails.headline}
+                onChange={(value) => handlleInputChange(value, 'headline')}
+                theme="snow"
+                modules={modules}
+                placeholder="Headline"
+                className={`editor ${activeEditor === 'headline' ? 'show-toolbar' : 'hide-toolbar'}`}
+              />
+
+            </div>
+
+
             {/* place */}
-            <div 
-            className="pb-3 input-box"
-            onMouseEnter={() => setActiveEditor('place')}
-            onMouseLeave={() => setActiveEditor(null)}
-          >
-            <ReactQuill
-              value={newsDetails.place}
-              onChange={(value) => handlleInputChange(value, 'place')}
-              theme="snow"
-              modules={modules}
-              placeholder="Place"
-              className={`editor ${activeEditor === 'place' ? 'show-toolbar' : 'hide-toolbar'}`}
-            />
-          </div>
+            <div
+              className="pb-3 input-box"
+              onMouseEnter={() => setActiveEditor('place')}
+              onMouseLeave={() => setActiveEditor(null)}
+            >
+              <ReactQuill
+                value={newsDetails.place}
+                onChange={(value) => handlleInputChange(value, 'place')}
+                theme="snow"
+                modules={modules}
+                placeholder="Place"
+                className={`editor ${activeEditor === 'place' ? 'show-toolbar' : 'hide-toolbar'}`}
+              />
+            </div>
             {/* content */}
-            <div 
-            className="pb-3 input-box"
-            onMouseEnter={() => setActiveEditor('content')}
-            onMouseLeave={() => setActiveEditor(null)}
-          >
-            <ReactQuill
-              value={newsDetails.content}
-              onChange={(value) => handleInputChange(value, 'content')}
-              theme="snow"
-              modules={modules}
-              placeholder="Content"
-              className={`editor ${activeEditor === 'content' ? 'show-toolbar' : 'hide-toolbar'}`}
-            />
-          </div>
+            <div
+              className="pb-3 input-box"
+              onMouseEnter={() => setActiveEditor('content')}
+              onMouseLeave={() => setActiveEditor(null)}
+            >
+              <ReactQuill
+                value={newsDetails.content}
+                onChange={(value) => handleInputChange(value, 'content')}
+                theme="snow"
+                modules={modules}
+                placeholder="Content"
+                className={`editor ${activeEditor === 'content' ? 'show-toolbar' : 'hide-toolbar'}`}
+              />
+            </div>
             {/* image upload */}
             <div className='d-flex justify-content-center border px-5 py-2'>
               <label htmlFor="profileImg">
@@ -114,11 +114,11 @@ function TextEditor() {
                 <option value={3}>Politics</option>
               </select>
             </div>
-          
+
             {/* button */}
             <div className='d-flex flex-row justify-content-between'>
-            <button className='btn btn-warning px-5 py-3'>cancel</button>
-            <button className='btn btn-success px-5 py-3'>Save</button>
+              <button className='btn btn-warning px-5 py-3'>cancel</button>
+              <button className='btn btn-success px-5 py-3'>Save</button>
             </div>
           </form>
         </div>

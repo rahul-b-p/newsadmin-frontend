@@ -8,32 +8,35 @@ import { displayNewsApi } from '../services/allApi';
 
 function Headlineview() {
   const [newsDetails, setNewsDetails] = useState([])
-  const [latestNews,setLatestNews] =useState([])
+  const [latestNews, setLatestNews] = useState([])
 
-  const getHeadline=async()=>{
+  const getHeadline = async () => {
     const result = await displayNewsApi()
     setNewsDetails(result.data)
-    setLatestNews(newsDetails.sort((c1,c2)=>c2.id-c1.id).slice(0, 4))
+    setLatestNews(newsDetails.sort((c1, c2) => c2.id - c1.id).slice(0, 4))
   }
 
   console.log(latestNews);
 
 
 
-  useEffect(()=>{
+  useEffect(() => {
     getHeadline()
-  },[])
+  }, [])
   return (
     <>
- 
+
       <h1 className='mt-5 d-flex justify-content-center align-items-center text-danger '>Exclusive News</h1>
-        <div className='d-flex justify-content-center align-items-center'>
-          <Row className='mt-5'>
-            {latestNews?.map((item)=>(
-              <Col md={3} className='mb-4 mb-md-0' ><HeadlineCard  /></Col>
-            ))}
-          </Row>
-        </div>
+      <div className='d-flex justify-content-center align-items-center'>
+        <Row className='mt-5'>
+
+          <Col md={3} className='mb-4 mb-md-0' ><HeadlineCard /></Col>
+          <Col md={3} className='mb-4 mb-md-0' ><HeadlineCard /></Col>
+          <Col md={3} className='mb-4 mb-md-0' ><HeadlineCard /></Col>
+          <Col md={3} className='mb-4 mb-md-0' ><HeadlineCard /></Col>
+
+        </Row>
+      </div>
     </>
   )
 }

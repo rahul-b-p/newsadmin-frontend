@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import NewsCards from './NewsCards';
 import { displayNewsApi } from '../services/allApi';
-import { Col, Row} from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 
 
 
@@ -44,24 +44,24 @@ function CategorizedView() {
 
             {newsDetails?.length > 0 ?
                 <Row className=" w-100 mt-3 mb-2  p-4 ">
-                    {isSelected=='all'?
-                        newsDetails?.sort((c1,c2)=>c2.id-c1.id).map((item) => (
-                        <Col xs={12} md={6} lg={4}  className='mb-5' >
-                            <NewsCards news={item} />
-                        </Col>
+                    {isSelected == 'all' ?
+                        newsDetails?.sort((c1, c2) => c2.id - c1.id).map((item) => (
+                            <Col xs={12} md={6} lg={4} className='mb-5' >
+                                <NewsCards news={item} />
+                            </Col>
                         ))
                         :
-                        newsDetails?.sort((c1,c2)=>c2.id-c1.id).map((item) => ( 
-                        item.category==isSelected &&
-                        <Col xs={12} md={6} lg={4}  className='mb-5' >
-                            <NewsCards news={item} />
-                        </Col> 
-                    ))}
+                        newsDetails?.sort((c1, c2) => c2.id - c1.id).map((item) => (
+                            item.category == isSelected &&
+                            <Col xs={12} md={6} lg={4} className='mb-5' >
+                                <NewsCards news={item} />
+                            </Col>
+                        ))}
                 </Row>
                 :
                 <p className='text-center text-danger fw-bold'>No news to display</p>
             }
-            
+
         </>
     )
 }
