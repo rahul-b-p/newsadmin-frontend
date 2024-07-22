@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { LinearGradient } from 'react-text-gradients';
 import newslogo from '../assets/pic3.png';
+import '../App.css'
 
 
 function Footer() {
@@ -17,18 +18,21 @@ function Footer() {
   };
 
   return (
+
     <footer className="container-fluid  py-4">
+       <hr style={{border:"3px solid black"}}/>
       <div className="row mb-3">
       <div className="col d-flex ">
           <img src={newslogo} alt="News Logo" width="70" height="50" />
           <h1 className='fs-1'>
-  <LinearGradient gradient={['to left', '#2E86C1 , #E74C3C ']}>
+  <LinearGradient gradient={['to left', 'blue , #E74C3C ']} style={{fontSize:"40px",fontWeight:"800"}}>
     News Spin
   </LinearGradient>
 </h1>
         </div>
         <div className="col-12">
-          <hr />
+        <hr style={{border:"2px solid black"}}/>
+       
         </div>
       </div>
 
@@ -60,22 +64,23 @@ function Footer() {
         </div>
       </div>
 
-      <div className="row mb-3">
+      <div className="row pb-3" >
         <div className="col-12">
-          <hr />
+      
+       
         </div>
       </div>
 
-      <div className="row">
+      <div className="row py-3"style={{backgroundColor:"gray"}} >
         <div className="col-12 d-flex justify-content-between align-items-center">
-          <div className="d-flex">
-            <FontAwesomeIcon className="me-2" icon={faFacebook} size='2x' color='black' />
-            <FontAwesomeIcon className="me-2" icon={faInstagram} size='2x' color='black' />
-            <FontAwesomeIcon className="me-2" icon={faTwitter} size='2x' color='black' />
-            <FontAwesomeIcon className="me-2" icon={faLinkedin} size='2x' color='black' />
+          <div className="d-flex justify-content-center align-items-center ">
+            <FontAwesomeIcon className="mx-2 icon_hover text-center d-flex justify-content-center align-items-center" icon={faFacebook} size='lg' color='black' />
+            <FontAwesomeIcon className="mx-2 icon_hover text-center d-flex justify-content-center align-items-center" icon={faInstagram} size='lg' color='black' />
+            <FontAwesomeIcon className="mx-2 icon_hover text-center d-flex justify-content-center align-items-center" icon={faTwitter} size='lg' color='black' />
+            <FontAwesomeIcon className="mx-2 icon_hover text-center d-flex justify-content-center align-items-center" icon={faLinkedin} size='lg' color='black' />
           </div>
           <div>
-            <p className="mb-0">© 2024 News Management System. All rights reserved.</p>
+            <p className='text-light'>© 2024 News Management System. All rights reserved.</p>
           </div>
         </div>
       </div>

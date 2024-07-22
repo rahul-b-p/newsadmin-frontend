@@ -10,6 +10,7 @@ import DetailedNewsView from './pages/DetailedNewsView';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Deactivated from './pages/Deactivated';
+import PageNotFound from './pages/PageNotFount';
 
 function App() {
   const location = useLocation();
@@ -26,6 +27,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/newsview' element={<DetailedNewsView />} />
         <Route path='/deactivated' element={<Deactivated/>} />
+        <Route path='*' element={<PageNotFound/>}/>
       </Routes>
       <Footer />
     </>
