@@ -4,6 +4,9 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Headlineview from '../components/Headlineview'
 import Videocard from '../components/Videocard'
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom';
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Home() {
   return (
@@ -25,7 +28,24 @@ function Home() {
         </Carousel>
 
       </div>
-      <div className='mt-5'><Headlineview /></div>
+      <div className='mt-5'>
+      <div className='container border shadow p-5 '>
+        
+        <Container className='shadow mt-5 p-4'>
+          <Row className=''>
+            <Col md={12} className='d-flex justify-content-center align-items-center'>
+              <h3><span className='text-danger'>News</span></h3>
+              <Link to={'/editor'} className='p-1 rounded shadow btn btn-danger ms-3 ' style={{ width: '30px' }}>
+                <FontAwesomeIcon icon={faPlus} />
+              </Link>
+            </Col>
+          </Row>
+        </Container>
+
+        <Headlineview/>
+        
+      </div>
+      </div>
       <div className='mt-5'><Videocard /></div>
     </>
   )
